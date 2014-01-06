@@ -48,3 +48,7 @@ txtrst='\e[0m'    # Text Reset
  
 alias sudo="sudo -E"
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$txtcyn\]:\w\[$bldwht\]\$\[$txtrst\] "
+
+
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
