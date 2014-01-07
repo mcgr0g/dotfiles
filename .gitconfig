@@ -11,3 +11,6 @@
     ci = commit
     co = checkout
     ds = diff --cached #http://stackoverflow.com/questions/3686452/what-are-the-differences-between-these-git-diff-commands
+[core]
+	autocrlf = input
+	safecrlf = true
