@@ -1,4 +1,30 @@
-alias c='clear'
+export HISTTIMEFORMAT='%F %T ' # Ведение лога истории с datestamp'ом
+PROMPT_COMMAND='history -a;history -n' # Занесение команды в .bash_history сразу же, после нажатия enter (а не после завершения сеанса)
+export HISTSIZE=100500 # Увеличение размера хистори
+export HISTCONTROL=ignoredups # не заносить в хистори повторяющиеся друг за другом команды
+export HISTIGNORE="&:ls:<bf>g:exit:< >*:ssh:history"</bf> # Отключаем занесение «бесполезных» с точки зрения истории команд:
+
+SSH_ENV=$HOME/.ssh/environment
+# start the ssh-agent
+function start_agent {
+    echo "Initializing new SSH agent..."
+    # spawn ssh-agent
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add
+}
+   
+if [ -f "${SSH_ENV}" ]; then
+     . "${SSH_ENV}" > /dev/null
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -8,8 +34,15 @@ alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 alias ports='netstat -tulanp'
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 txtblk='\e[0;30m' # Black - Regular
@@ -49,28 +82,10 @@ txtrst='\e[0m'    # Text Reset
 alias sudo="sudo -E"
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$txtcyn\]:\w\[$bldwht\]\$\[$txtrst\] "
 
+alias extmonitor='xrandr --output VGA1 --auto --primary && xrandr --rate 72 && xrandr --output LVDS1 --off'
+alias intmonitor='xrandr --output LVDS1 --auto --primary && xrandr --output VGA1 --off'
 
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'
 
-SSH_ENV=$HOME/.ssh/environment
-   
-# start the ssh-agent
-function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add
-}
-   
-if [ -f "${SSH_ENV}" ]; then
-     . "${SSH_ENV}" > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
-else
-    start_agent;
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
