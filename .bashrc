@@ -2,9 +2,9 @@ export HISTTIMEFORMAT='%F %T ' # Ведение лога истории с dates
 PROMPT_COMMAND='history -a;history -n' # Занесение команды в .bash_history сразу же, после нажатия enter (а не после завершения сеанса)
 export HISTSIZE=10500 # Увеличение размера хистори
 export HISTCONTROL=ignoredups # не заносить в хистори повторяющиеся друг за другом команды
-export HISTIGNORE="&:ls:g:exit:< >*:ssh:history" # Отключаем занесение «бесполезных» с точки зрения истории команд:
+export HISTIGNORE="&:exit:< >*:ssh:history" # Отключаем занесение «бесполезных» с точки зрения истории команд:
 if [ -f /etc/bash_completion ]; then
-. /etc/bash_completion
+    ./etc/bash_completion
 fi
 
 SSH_ENV=$HOME/.ssh/environment
