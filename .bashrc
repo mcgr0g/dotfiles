@@ -4,7 +4,7 @@ export HISTSIZE=10500 # Увеличение размера хистори
 export HISTCONTROL=ignoredups # не заносить в хистори повторяющиеся друг за другом команды
 export HISTIGNORE="&:exit:< >*:ssh:history" # Отключаем занесение «бесполезных» с точки зрения истории команд:
 if [ -f /etc/bash_completion ]; then
-    ./etc/bash_completion
+    . /etc/bash_completion
 fi
 
 SSH_ENV=$HOME/.ssh/environment
