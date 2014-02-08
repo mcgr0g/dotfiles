@@ -12,3 +12,19 @@ set linebreak "перенос по словам а не по буквам
 set dy=lastline
 map! ii <Esc> " map ii to Esc
 map! ;; <Esc> " map ;; to Esc
+
+set nocompatible
+filetype off " обязательно!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+filetype plugin indent on " обязательно!
+
+Bundle 'gmarik/vundle'
+
+Bundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
+
