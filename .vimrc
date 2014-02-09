@@ -28,3 +28,7 @@ set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
 
+Bundle 'scrooloose/nerdtree'
+silent! map <F2> :NERDTreeToggle<CR> " открваем/закрываем по F2
+let g:NERDTreeMapPreview="<F3>" " просматриваем выбранный файл
+
