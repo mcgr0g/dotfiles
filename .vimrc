@@ -1,34 +1,57 @@
+"ставим плагины и конфигурируем их
+set nocompatible
+filetype off " обязательно!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree'
+Bundle 'L9'
+Bundle 'genutils' 
+Bundle 'SelectBuf'
+Bundle 'FuzzyFinder'
+Bundle 'scrooloose/nerdcommenter'
+filetype plugin indent on " обязательно!
+
+" конфигурируем тему
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
+
+" конфигурируем переход по файлам
+nmap <silent> <F2> :NERDTreeToggle<CR>
+imap <silent> <F2> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+
+nmap <Leader>f :FufFile **/<cr>
+
+" конфиг отступов
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
-syntax on
-set number
-set iminsert=0 "латиница при поиске по умолчанию
-set is "игнорировать регистр при поиске
-set hls "подсвечивать поиск
-set linebreak "перенос по словам а не по буквам
-set dy=lastline
-map! ii <Esc> " map ii to Esc
-map! ;; <Esc> " map ;; to Esc
 
-set nocompatible
-filetype off " обязательно!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-filetype plugin indent on " обязательно!
+" конфиг для ускоренного доступа
+map! ii <Esc>  
+:let mapleader = "," " назначили лидер-кнопку на ,
 
-Bundle 'gmarik/vundle'
+" когфиг для табов
+nmap <leader>w <C-w>v<C-w>l " разделили экрана на 2 части и перекючились на новый таб
+nmap <C-h> <C-w>h " используя ctrl и hjkl можно переключиться в левый таб
+nmap <C-j> <C-w>j " в верхний таб
+nmap <C-k> <C-w>k " в нижний таб
+nmap <C-l> <C-w>l " а правый таб
 
-Bundle 'altercation/vim-colors-solarized'
+" базовый конфиг
 syntax enable
-set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme solarized
-
-Bundle 'scrooloose/nerdtree'
-silent! map <F2> :NERDTreeToggle<CR> " открваем/закрываем по F2
-let g:NERDTreeMapPreview="<F3>" " просматриваем выбранный файл
+set number
+set iminsert=0 " латиница при поиске по умолчанию
+set is " игнорировать регистр при поиске
+set hls "подсвечивать поиск
+set linebreak " перенос по словам а не по буквам
+set dy=lastline
+set laststatus=2 " Always show the statusline
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
