@@ -11,6 +11,7 @@ Bundle 'genutils'
 Bundle 'SelectBuf'
 Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'jszakmeister/vim-togglecursor'
 filetype plugin indent on " обязательно!
 
 " конфигурируем тему
@@ -18,6 +19,12 @@ set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
+
+" конфиг для потрохов
+set textwidth=80 " норм ширина это 80
+set colorcolumn=+1 " а 81 символ подкрашиваем
+highlight ColorColumn ctermbg=DarkGrey
+set cursorline " выделяем строку с курсором  
 
 " конфигурируем переход по файлам
 nmap <silent> <F2> :NERDTreeToggle<CR>
@@ -48,10 +55,13 @@ nmap <C-l> <C-w>l " а правый таб
 syntax enable
 set number
 set iminsert=0 " латиница при поиске по умолчанию
-set is " игнорировать регистр при поиске
+set ic " игнорировать регистр при поиске
+set is " использовать инкрементальный поиск
+set textwidth=79
 set hls "подсвечивать поиск
 set linebreak " перенос по словам а не по буквам
 set dy=lastline
 set laststatus=2 " Always show the statusline
+set showcmd " отображение выполняемой команды
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
