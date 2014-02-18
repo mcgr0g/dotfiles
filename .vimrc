@@ -49,13 +49,13 @@ let NERDTreeIgnore = ['\.pyc$']
 nmap <Leader>f :FufFile **/<cr>
 
 " конфиг отступов
-set tabstop=8
+set tabstop=8 " Размер табуляции
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=4 " Размер сдвига при нажатии на клавиши << и >>
 set smarttab
-set autoindent " Автоотступ
+set autoindent " Копирует отступ от предыдущей строки
 set expandtab " Ставим табы пробелами
-set smartindent
+set smartindent " Включаем 'умную' автоматическую расстановку отступов
 
 " когфиг для сплитов экрана
 nmap <leader>w <C-w>v<C-w>l " разделили экрана на 2 части и перекючились на новый таб
@@ -68,18 +68,18 @@ nmap <C-l> <C-w>l " а правый таб
 set iminsert=0 " латиница при поиске по умолчанию
 set ic " игнорировать регистр при поиске
 set is " использовать инкрементальный поиск
-set hls "подсвечивать поиске
+set hls "подсвечивать слова при поиске
 
 " конфиг для редактирования
 set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old text
 
 " конфиг кодировок и языка
 set langmenu=none " Always use english menu
-set keymap=russian-jcukenwin " Alternative keymap
-set iminsert=0 " English by default
-set imsearch=-1 " Search keymap from insert mode
+set keymap=russian-jcukenwin " переключение раскладок клавиатуры по <C-^>
+set iminsert=0 " Раскладка по умолчанию - английская
+set imsearch=-1 " Чтобы дефолтная раскладка была и в режиме поиска
 set spelllang=en,ru " Languages
 set encoding=utf-8 " Default encoding
-set fileencodings=utf-8,cp1251,koi8-r,cp866
+set fileencodings=utf-8,cp1251,koi8-r,cp866 " Список кодировок файлов для автоопределения
 set termencoding=utf-8
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
