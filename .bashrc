@@ -1,4 +1,5 @@
 export HISTTIMEFORMAT='%F %T ' # Ведение лога истории с datestamp'ом
+shopt -s histappend
 PROMPT_COMMAND='history -a;history -n' # Занесение команды в .bash_history сразу же, после нажатия enter (а не после завершения сеанса)
 export HISTSIZE=10500 # Увеличение размера хистори
 export HISTCONTROL=ignoredups # не заносить в хистори повторяющиеся друг за другом команды
