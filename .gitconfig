@@ -1,6 +1,6 @@
 [user]
-	name = Ronnie McGrog
-	email = ronnie@mcgrog.now.im
+    name = Ronnie McGrog
+    email = ronnie@mcgrog.now.im
 [color]
     ui = true
 [alias]
@@ -10,7 +10,17 @@
     st = status
     ci = commit
     co = checkout
-    ds = diff --cached #http://stackoverflow.com/questions/3686452/what-are-the-differences-between-these-git-diff-commands
+    ds = diff --cached # what in index but not yet committed
+    dlc = diff --cached HEAD^ # show last commit
+    la = "!git config -l | grep alias | cut -c 7-" # show list aliases
 [core]
-	autocrlf = input
-	safecrlf = true
+    autocrlf = input
+    safecrlf = true
+[merge]
+    tool = extMerge 
+    keepBackup = false
+[mergetool "extMerge"]
+    trustExitCode = false
+    keepBackup = false
+    keepTemporaries = false
+    cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
