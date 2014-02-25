@@ -9,36 +9,47 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jszakmeister/vim-togglecursor'
 Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'morhetz/gruvbox'
 Bundle 'bling/vim-airline'
+Bundle 'python.vim--Vasiliev'
+Bundle 'django.vim'
 Bundle 'L9'
 Bundle 'genutils' 
 filetype plugin indent on " обязательно!
 
-" конфигурируем переход по файлам
-nmap <silent> <F2> :NERDTreeToggle<CR>
-imap <silent> <F2> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
-
 " конфигурируем тему
 set t_Co=256
+syntax enable
 let g:solarized_termcolors=256
-colorscheme solarized
 set background=dark
+colorscheme gruvbox " solarized
 let g:airline_powerline_fonts = 1 " включаем патченные шрифты
 let g:airline#extensions#tabline#enabled = 1
 
 " конфиг хоткеев
-map! ii <Esc>  " выхдоим из редактирования по ii
+map! ii <Esc> " выхдоим из редактирования по ii
 :let mapleader = "," " назначили лидер-кнопку на ,
-map  <F3>:tabnext<CR> " слудующий таб
-map  <F4>:tabprevious<CR> " предыдущий таб
-
-" когфиг для сплитов экрана
-nmap <leader>w <C-w>v<C-w>l " разделили экрана на 2 части и перекючились на новый сплит
+" для табов
+nmap <F3> :tabprevious<CR> " предыдущий таб
+nmap <F4> :tabnext<CR> " слудующий таб
+nmap <F12> :tabclose<CR> " закрыть таб
+" для буферов
+nmap <S-F3> :bp<CR> " предыдущий буфер
+nmap <S-F4> :bn<CR> " следующий буфер
+"для сплитов экрана
+nmap <leader>w <C-w>v<C-w>l " разделили экрана на 2 части и переключились на новый сплит
 nmap <C-h> <C-w>h " используя ctrl и hjkl можно переключиться в левый сплит
-nmap <C-j> <C-w>j " в верхний сплит
-nmap <C-k> <C-w>k " в нижний сплит
+nmap <C-j> <C-w>j " в нижний сплит
+nmap <C-k> <C-w>k " в верхний сплит
 nmap <C-l> <C-w>l " а правый сплит
+nmap <C-F12> <C-w>q " закрыть сплит
+nmap <C-F3> <C-w>h " в левый сплит
+nmap <C-F4> <C-w>l " в правый сплит
+
+" конфиг для  nerdtree
+nmap <silent> <F2> :NERDTreeToggle<CR>
+imap <silent> <F2> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " конфиг для редактирования
 set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old text
@@ -58,7 +69,7 @@ set linebreak " перенос по словам а не по буквам
 set dy=lastline
 set guifont=courier_new:h10:cRUSSIAN
 set number " Нумерация строк, для отключения set nonu
-syntax enable
+syntax on
 "set noshowmode
 let python_highlight_all = 1 "Подсвечиваем все что можно подсвечивать
 set noswapfile " не использовать своп-файл (в него скидываются открытые буферы)
@@ -73,9 +84,7 @@ set autoindent " Копирует отступ от предыдущей стр�
 set expandtab " Ставим табы пробелами
 set smartindent " Включаем 'умную' автотабуляцию (автоотступ после {)
 
-
 " кофигурируем поиск
-set imsearch=0 " при поиске по умолчанию латиница
 set smartcase " искомое выражение содержит символы в верхнем регистре -> ищет с учётом регистра, иначе - без учёта
 set ic " игнорировать регистр при поиске
 set is " использовать инкрементальный поиск
@@ -88,6 +97,7 @@ vnoremap <silent># <ESC>:call VisualSearch()<CR>?<C-R>/<CR>
 let $LANG = 'en'
 set langmenu=none " Всегда использовать английское меню
 set keymap=russian-jcukenwin " переключение раскладок клавиатуры по <C-^>
+set imsearch=0 " при поиске по умолчанию латиница
 set iminsert=0 " Раскладка по умолчанию - английская
 set spelllang=en,ru " Орфография для этих языков
 set encoding=utf-8 " Кодировка по умолчанию
