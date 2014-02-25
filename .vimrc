@@ -76,13 +76,19 @@ set noswapfile " не использовать своп-файл (в него с
 set title " показывать имя буфера в заголовке терминала
 
 " конфиг отступов
-set tabstop=4 " Размер табуляции (для питона)
-set softtabstop=4 " Ширина мягкого таба
-set shiftwidth=4 " Размер сдвига при нажатии на клавиши << и >>
+set tabstop=4 "= ts Размер табуляции (для питона)
+set softtabstop=4 "=sts Ширина мягкого таба
+set shiftwidth=4 "=sw Размер сдвига при нажатии на клавиши << и >>
 set smarttab
 set autoindent " Копирует отступ от предыдущей строки
-set expandtab " Ставим табы пробелами
+set expandtab "= et Ставим табы пробелами
 set smartindent " Включаем 'умную' автотабуляцию (автоотступ после {)
+
+if has("autocmd") " Табуляция в в зависмости от типа файла 
+    autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType css setl ts=2 sts=2 sw=2 expandtab
+    autocmd FileType javascript setl ts=4 sts=4 sw=4 noexpandtab
+endif
 
 " кофигурируем поиск
 set smartcase " искомое выражение содержит символы в верхнем регистре -> ищет с учётом регистра, иначе - без учёта
