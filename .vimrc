@@ -14,7 +14,10 @@ Bundle 'bling/vim-airline'
 Bundle 'python.vim--Vasiliev'
 Bundle 'django.vim'
 Bundle 'L9'
-Bundle 'genutils' 
+Bundle 'genutils'
+Bundle 'DfrankUtil' 
+Bundle 'vimprj'
+Bundle 'indexer.tar.gz'
 filetype plugin indent on " обязательно!
 
 " конфигурируем тему
@@ -45,6 +48,9 @@ nmap <C-l> <C-w>l " а правый сплит
 nmap <C-F12> <C-w>q " закрыть сплит
 nmap <C-F3> <C-w>h " в левый сплит
 nmap <C-F4> <C-w>l " в правый сплит
+
+" конфиг индексатора
+let g:indexer_ctagsCommandLineOptions = "--python-kinds=-vi --fields=+iaS"
 
 " конфиг для  nerdtree
 nmap <silent> <F2> :NERDTreeToggle<CR>
