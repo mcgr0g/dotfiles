@@ -13,8 +13,8 @@ Repo for my dotfiles, configs & tips
 
 **terminal colors**
 
-> font: #AAAAAA
-> background: #232323
+> foreground: #AAAAAA or rbb = {170,170,170}
+> background: #232323 or rgb = {35,35,35}
 
 #For vim:
 for solve troubles with **vim-airline**:

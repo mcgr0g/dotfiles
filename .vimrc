@@ -1,33 +1,33 @@
 "ставим плагины и конфигурируем их
 set nocompatible
 filetype off " обязательно!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'jszakmeister/vim-togglecursor'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'morhetz/gruvbox'
-Bundle 'bling/vim-airline'
-Bundle 'python.vim--Vasiliev'
-Bundle 'django.vim'
-Bundle 'L9'
-Bundle 'genutils'
-Bundle 'DfrankUtil' 
-Bundle 'vimprj'
-Bundle 'indexer.tar.gz'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jszakmeister/vim-togglecursor'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'morhetz/gruvbox'
+"Plugin 'bling/vim-airline'
+Plugin 'python.vim--Vasiliev'
+"Plugin 'django.vim'
+Plugin 'L9'
+Plugin 'genutils'
+"Plugin 'DfrankUtil' 
+"Plugin 'vimprj'
+"Plugin 'indexer.tar.gz'
 filetype plugin indent on " обязательно!
-
+call vundle#end()
 " конфигурируем тему
 set t_Co=256
 syntax enable
 let g:solarized_termcolors=256
 set background=dark
 colorscheme gruvbox " solarized
-let g:airline_powerline_fonts = 1 " включаем патченные шрифты
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1 " включаем патченные шрифты
+"let g:airline#extensions#tabline#enabled = 1
 
 " конфиг хоткеев
 map! ii <Esc> " выхдоим из редактирования по ii
@@ -50,7 +50,7 @@ nmap <C-F3> <C-w>h " в левый сплит
 nmap <C-F4> <C-w>l " в правый сплит
 
 " конфиг индексатора
-let g:indexer_ctagsCommandLineOptions = "--python-kinds=-vi --fields=+iaS"
+"let g:indexer_ctagsCommandLineOptions = "--python-kinds=-vi --fields=+iaS"
 
 " конфиг для  nerdtree
 nmap <silent> <F2> :NERDTreeToggle<CR>
