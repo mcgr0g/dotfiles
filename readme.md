@@ -1,14 +1,13 @@
-Repo for my dotfiles, configs & tips
-==============================================
-#For system
+config & tips
+====================================
+##Terminal preferences
 
-
-**terminal colors**
+**colors**
 
 ```
 foreground: [
     hex : ( #AAAAAA ) ,
-    rgb : (170, 170, 170) ]
+    rgb : (170, 170, 170) ],
 background: [
     hex : ( #232323 ) ,
     rgb : (35, 35, 35) ]
