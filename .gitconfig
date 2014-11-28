@@ -16,11 +16,3 @@
 [core]
     autocrlf = input
     safecrlf = true
-[merge]
-    tool = extMerge 
-    keepBackup = false
-[mergetool "extMerge"]
-    trustExitCode = false
-    keepBackup = false
-    keepTemporaries = false
-    cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
