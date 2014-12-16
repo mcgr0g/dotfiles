@@ -1,0 +1,19 @@
+{
+    "auto_complete_commit_on_tab": false,
+    "bold_folder_labels": true,
+    "caret_style": "solid",
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "dictionary": "Packages/russian_english.dic",
+    "font_size": 10.0,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":
+    [
+        //"Vintage"
+    ],
+    "spell_check": true,
+    "translate_tabs_to_spaces": true,
+    "wide_caret": true,
+    "show_encoding": true,
+    "fallback_encoding": "Cyrillic (Windows 1251)"
+}
