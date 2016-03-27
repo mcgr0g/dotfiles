@@ -1,5 +1,14 @@
 config & tips
 ====================================
+##installation
+
+```
+cd ~
+ln -s dotfiles/.bashrc .bashrc
+ln -s dotfiles/.gitconfig .gitconfig
+ln -s dotfiles/.vimrc .vimrc
+```
+
 ##Terminal preferences
 
 **colors**
