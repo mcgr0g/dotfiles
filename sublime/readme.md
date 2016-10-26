@@ -6,3 +6,4 @@ requirements
  - [AlignTab](https://github.com/randy3k/AlignTab#getting-start) Выравнивание текста по табу
  - [CaseConversion](https://packagecontrol.io/packages/Case%20Conversion) Манимуляции с регистром
  - [Sublimeiles](https://github.com/al63/SublimeFiles#usage) Открытие файлов из оболочки
+ - [Dictionary](https://app.box.com/dict) руско-английский набор слов для спелл-чекера, класть в %SublimeText%\Data\Packages
