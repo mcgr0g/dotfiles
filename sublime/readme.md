@@ -7,3 +7,5 @@ requirements
 - [Sublimeiles](https://github.com/al63/SublimeFiles#usage) Открытие файлов из оболочки
 - [Dictionary](https://app.box.com/dict) руско-английский набор слов для спелл-чекера, класть в %SublimeText%\Data\Packages
 - [IndentX](https://packagecontrol.io/packages/IndentX) автоворматирвоание XML и JSON
+- [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview) преврю Markdown в браузере
+- [LiveReload](https://packagecontrol.io/packages/LiveReload) автообноление страницы при изменения файла
