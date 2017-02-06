@@ -17,4 +17,4 @@
     autocrlf = true
     safecrlf = false # ругаться ли на автозамену, при взведенном autocrlf, в виде варнингов
 [push]
-		default = simple
+	default = simple
