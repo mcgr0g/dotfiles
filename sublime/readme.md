@@ -9,3 +9,4 @@ requirements
 - [IndentX](https://packagecontrol.io/packages/IndentX) автоворматирвоание XML и JSON
 - [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview) преврю Markdown в браузере, смотри [howto Markdown](https://github.com/mcgr0g/dotfiles/blob/master/sublime/howto.md#markdown)
 - [LiveReload](https://packagecontrol.io/packages/LiveReload) автообноление страницы при изменения файла
+- [plantUml](https://github.com/jvantuyl/sublime_diagram_plugin) создание диаграмм из псевдокода
