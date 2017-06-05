@@ -14,7 +14,7 @@
     dlc = diff --cached HEAD^ # показать только последний коммит
     la = "!git config -l | grep alias | cut -c 7-" # показать список алиасов
 [core]
-    autocrlf = true
+	autocrlf = input
     safecrlf = false # ругаться ли на автозамену, при взведенном autocrlf, в виде варнингов
 [push]
 	default = simple
