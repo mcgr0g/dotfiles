@@ -1,7 +1,6 @@
-config & tips
-====================================
-##installation
+# config & tips
 
+## installation
 ```
 cd ~
 ln -s dotfiles/.bashrc .bashrc
@@ -9,10 +8,8 @@ ln -s dotfiles/.gitconfig .gitconfig
 ln -s dotfiles/.vimrc .vimrc
 ```
 
-##Terminal preferences
-
+## Terminal preferences
 **colors**
-
 ```
 foreground: [
     hex : ( #AAAAAA ) ,
@@ -22,13 +19,13 @@ background: [
     rgb : (35, 35, 35) ]
 ```
 
-##For vim:
+## For vim:
 
-###requiremetns
+### requiremetns
 You need to install [Vundle](https://github.com/VundleVim/Vundle.vim)
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-###for solve troubles with **vim-airline**:
+### for solve troubles with **vim-airline**:
 
  1. read this [paragraph](https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig) about fontconfig
  2. make tips from 1 to 5 to . It'll decrease blood pressure
@@ -43,10 +40,12 @@ fc-cache -vf /usr/share/fonts/
 mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 ```
 
-###finally
+### finally
+
 open any file in vim and run `:PluginInstall`
 
-##(x)ubuntu
+## (x)ubuntu
+
 **dark theme**
 
 ```
