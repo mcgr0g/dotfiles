@@ -3,6 +3,7 @@ set nocompatible
 filetype off " обязательно!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
