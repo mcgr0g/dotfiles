@@ -19,3 +19,7 @@
     eol =  lf
 [push]
 	default = simple
+# глобальный gitignote
+# для подключения надо исполнить  на
+    # nix: git config --global core.excludesfile '~/.gitignore'
+    # win: git config --global core.excludesfile "%USERPROFILE%\.gitignore"
