@@ -21,7 +21,7 @@ background: [
 
 ## For vim:
 
-### requiremetns
+### requirements
 You need to install [Vundle](https://github.com/VundleVim/Vundle.vim)
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
