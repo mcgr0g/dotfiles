@@ -11,3 +11,4 @@ requirements
 - [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC) Генерим оглавление. [Заметки](howto.md#markdown-toc)
 - [LiveReload](https://packagecontrol.io/packages/LiveReload) автообноление страницы при изменения файла
 - [plantUml](https://github.com/jvantuyl/sublime_diagram_plugin) создание диаграмм из псевдокода
+- [Monokai JSON+](https://packagecontrol.io/packages/Monokai%20JSON%2B) для подстветки уровней json. Не работает, читай [howto](howto.md#Monokai-JSON-plus)
