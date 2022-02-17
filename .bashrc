@@ -29,15 +29,6 @@ else
     start_agent;
 fi
 
-alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../../../'
-alias path='echo -e ${PATH//:/\\n}'
-alias now='date +%T'
-alias nowtime=now
-alias nowdate='date +"%d-%m-%Y"'
-alias ports='netstat -tulanp'
-
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -93,3 +84,4 @@ alias intmonitor='xrandr --output LVDS1 --auto --primary && xrandr --output VGA1
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+alias ports='netstat -tulanp'
