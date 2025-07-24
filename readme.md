@@ -1,57 +1,58 @@
 # config & tips
 
 ## installation
+
 ```
 cd ~
+git clone git@github.com:mcgr0g/dotfiles.git
+ln -s dotfiles/.tool-versions .tool-versions
+ln -s dotfiles/.default-npm-packages .default-npm-packages
+ln -s dotfiles/.default-golang-pkgs .default-golang-pkgs
 ln -s dotfiles/.bashrc .bashrc
 ln -s dotfiles/.gitconfig .gitconfig
-ln -s dotfiles/.vimrc .vimrc
 ```
 
-## Terminal preferences
-**colors**
+## asdf
+exec
+
 ```
-foreground: [
-    hex : ( #AAAAAA ) ,
-    rgb : (170, 170, 170) ],
-background: [
-    hex : ( #232323 ) ,
-    rgb : (35, 35, 35) ]
+sudo  rm -rf /usr/local/go 
+sudo tar -C /usr/local -xzf go1.24.4.linux-amd64.tar.gz
+go install github.com/asdf-vm/asdf/cmd/asdf@v0.17.0
 ```
+`nano ~/.profile`
+```
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/goproject
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+```
+exec
+```
+source ~/.profile
+go install github.com/asdf-vm/asdf/cmd/asdf@v0.17.0
+```
+
+
+## omz
+https://github.com/ohmyzsh/ohmyzsh/wiki
+
+help: [fontconfig](https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig)
+### custom
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth 1
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions --depth 1
+cp .zshrc .zshrc.bkp
+ln -s dotfiles/.zshrc .zshrc
+```
+
+## LSP
+use list from https://microsoft.github.io/language-server-protocol/implementors/servers/ 
+or https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
+
 
 ## For vim:
 
 ### requirements
 You need to install [Vundle](https://github.com/VundleVim/Vundle.vim)
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-
-### for solve troubles with **vim-airline**:
-
- 1. read this [paragraph](https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig) about fontconfig
- 2. make tips from 1 to 5 to . It'll decrease blood pressure
-
-on ubuntu17.04 you should use
-```
-# move font to valid font path
-mv PowerlineSymbols.otf /usr/share/fonts/
-# Update font cache for the path the font
-fc-cache -vf /usr/share/fonts/
-# Install the fontconfig file
-mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-```
-
-### finally
-
-open any file in vim and run `:PluginInstall`
-
-## (x)ubuntu
-
-**dark theme**
-
-```
-sudo add-apt-repository ppa:noobslab/themes
-sudo apt-get update
-sudo apt-get install delorean-dark
-```
-
->**Note:** perfect is delorean-dark-theme-G-3.9

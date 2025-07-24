@@ -1,0 +1,5 @@
+golang.org/x/tools/gopls@latest
+github.com/go-delve/delve/cmd/dlv@latest
+golang.org/x/tools/cmd/goimports@latest
+github.com/nametake/golangci-lint-langserver@latest
+github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
