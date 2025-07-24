@@ -4,5 +4,6 @@ poetry 2.1.3
 uv 0.7.12
 java adoptopenjdk-jre-21.0.5+11.0.LTS
 just 1.41.0
-jq latest
+jq 1.8.1
 golang 1.24.5
+rust stable
