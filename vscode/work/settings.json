@@ -33,7 +33,7 @@
     "editor.minimap.enabled": false,
     "editor.fontFamily": "Fira Code",
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
-    "terminal.integrated.fontLigatures": true
+    "terminal.integrated.fontLigatures": true,
     "workbench.productIconTheme": "fluent-icons",
     "window.density.editorTabHeight": "compact",
     "editor.accessibilitySupport": "off",

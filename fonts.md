@@ -3,3 +3,10 @@
 - можно порадовать глаз тут https://app.programmingfonts.org/
 - заполучить по инструкции https://github.com/rbanffy/3270font#getting-it
 - даже воткнуть в последнюю винду без админских прав https://superuser.com/a/1345896
+
+в десктоп можно воткнуть
+
+- https://github.com/rsms/inter
+- https://www.fontsquirrel.com/fonts/TeX-Gyre-Heros
+
+для консоли `sudo apt install powerline fonts-powerline fonts-firacode`
