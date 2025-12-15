@@ -9,16 +9,9 @@
         "vscode-insiders",
         "docker-desktop"
     ],
-    "files.associations": {
-        "*.sql": "jinja-sql",
-        "*.yml": "jinja-yaml"
-    },
     "editor.wordWrap": "bounded",
     "editor.linkedEditing": true,
     "editor.quickSuggestionsDelay": 0,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "scm.workingSets.enabled": true,
     "editor.rulers": [
         90
@@ -26,20 +19,38 @@
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#d9e351"
     },
-    //Appearance
+    // dbt code fomatting
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.sql": "jinja-sql",
+        "*.yml": "jinja-yaml"
+    },
+    // Appearance
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.glyphMargin": false,
     "editor.minimap.enabled": false,
-    "editor.fontFamily": "Fira Code",
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
     "terminal.integrated.fontLigatures": true,
     "workbench.productIconTheme": "fluent-icons",
+    // compact view
     "window.density.editorTabHeight": "compact",
     "editor.accessibilitySupport": "off",
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
     "symbols.hidesExplorerArrows": false,
     "workbench.iconTheme": "catppuccin-perfect-sequoia",
-    "workbench.activityBar.location": "top"
+    "workbench.activityBar.location": "top",
+    // cline crunches
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "off",
+    "[python]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {},
+        "editor.formatOnType": false
+    }
 }
