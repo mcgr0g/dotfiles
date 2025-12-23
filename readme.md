@@ -13,6 +13,7 @@ mv .bashrc .bashrc-bkp
 ln -s .dotfiles/.bashrc .bashrc
 mv .zshrc .zshrc-bkp
 ln -s .dotfiles/.zshrc .zshrc
+ln -s .dotfiles/.tmux.conf .tmux.conf
 ```
 
 ## omz
@@ -100,6 +101,25 @@ source ~/.profile
 use list from https://microsoft.github.io/language-server-protocol/implementors/servers/ 
 or https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
 
+## tmux
+https://github.com/tony/tmux-config
+https://github.com/tmux/tmux/wiki/Getting-Started
+https://github.com/rothgar/awesome-tmux
+https://github.com/tony/tmux-config
+
+```
+tmux new -s dev
+tmux ls
+tmux attach -t dev
+tmux source ~/.tmux.conf
+tmux list-keys
+
+Ctrl-a n    # Следующее окно
+Ctrl-a p    # Предыдущее окно  
+Ctrl-a 1    # Окно номер 1 (с твоим base-index 1)
+Ctrl-a 2    # Окно номер 2
+Ctrl-a w    # Список окон (выбрать мышкой/клавишами)
+```
 
 ## vim:
 
