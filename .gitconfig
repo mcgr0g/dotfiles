@@ -23,3 +23,6 @@
 # для подключения надо исполнить  на
     # nix: git config --global core.excludesfile '~/.gitignore'
     # win: git config --global core.excludesfile "%USERPROFILE%\.gitignore"
+
+[include]
+    path = ~/.gitconfig-private
