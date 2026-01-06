@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop"
+    ],
+    "editor.wordWrap": "bounded",
+     // compact view
+    "workbench.activityBar.location": "top",
+    "editor.glyphMargin": false,
+    "editor.accessibilitySupport": "off",
+    "editor.minimap.enabled": false,
+    "window.density.editorTabHeight": "compact"
+}
