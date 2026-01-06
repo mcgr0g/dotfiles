@@ -1,6 +1,6 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="bureau"
+ZSH_THEME="ys"
 CASE_SENSITIVE="true"
 HIST_STAMPS="yyyy-mm-dd"
 export PATH=$PATH:/usr/local/go/bin
@@ -31,7 +31,6 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 . ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
 . ~/.asdf/plugins/java/set-java-home.zsh
-. ~/.asdf/installs/rust/stable/env
 
 # project specific
 # in project make `just --completions zsh > .just.zsh-completion`

@@ -6,4 +6,4 @@ java adoptopenjdk-jre-21.0.5+11.0.LTS
 just 1.41.0
 jq 1.8.1
 golang 1.25.5
-rust stable
+websocat 1.13.0
