@@ -23,18 +23,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nvim'
 # fi
 
-fpath+=("$PWD")
-
-autoload -Uz compinit && compinit
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
-
-. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
-. ~/.asdf/plugins/java/set-java-home.zsh
-
-# project specific
-# in project make `just --completions zsh > .just.zsh-completion`
-if [[ -f "$PWD/.just.zsh-completion" ]]; then
-  . "$PWD/.just.zsh-completion"
-fi
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+eval "$(mise activate zsh)"

@@ -1,0 +1,8 @@
+[tools]
+go = "1.25.7"
+node = "25.6.1"
+"npm:prettier" = "latest"
+python = "3.12.7"
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']

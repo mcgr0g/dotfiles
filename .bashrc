@@ -77,11 +77,19 @@ txtrst='\e[0m'    # Text Reset
 alias sudo="sudo -E"
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$txtcyn\]:\w\[$bldwht\]\$\[$txtrst\] "
 
-alias extmonitor='xrandr --output VGA1 --auto --primary && xrandr --rate 72 && xrandr --output LVDS1 --off'
-alias intmonitor='xrandr --output LVDS1 --auto --primary && xrandr --output VGA1 --off'
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
 
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 alias ports='netstat -tulanp'
+
+eval "$(mise activate bash)"

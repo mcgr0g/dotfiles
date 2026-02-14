@@ -1,9 +1,0 @@
-nodejs 25.2.1
-python 3.12.7
-poetry 2.2.1
-uv 0.9.17
-java adoptopenjdk-jre-21.0.5+11.0.LTS
-just 1.41.0
-jq 1.8.1
-golang 1.25.5
-websocat 1.13.0
