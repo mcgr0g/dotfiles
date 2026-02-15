@@ -14,7 +14,7 @@ mv .bashrc .bashrc-bkp
 ln -s .dotfiles/.bashrc .bashrc
 mv .zshrc .zshrc-bkp
 ln -s .dotfiles/.zshrc .zshrc
-ln -s .dotfiles/mise/config.toml .config/mise/config.toml
+ln -s ~/.dotfiles/mise/config.toml ~/.config/mise/config.toml
 ```
 
 ## omz
