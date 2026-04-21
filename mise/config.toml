@@ -6,3 +6,6 @@ python = "3.12.7"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']
+
+[settings]
+python.github_attestations = false
