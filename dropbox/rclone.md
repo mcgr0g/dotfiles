@@ -22,7 +22,9 @@ mkdir -p "$(dirname "$LOG")"
 # Запускаем двустороннюю синхронизацию
 exec rclone bisync dropbox:Apps/KeeWeb "$HOME/Documents/kee" \
   --log-file="$LOG" \
-  --verbose
+  --verbose \
+  --force \
+  --compare size,modtime,checksum
 EOF
 
 cat ~/.local/bin/rclone-keepass
