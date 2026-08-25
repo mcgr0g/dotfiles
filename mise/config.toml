@@ -1,7 +1,8 @@
 [tools]
 go = "1.26.4"
-node = "26.5.0"
+node = "22"
 "npm:prettier" = "latest"
+pnpm = "latest"
 python = "3.12.7"
 uv = "latest"
 
