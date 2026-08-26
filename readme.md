@@ -20,8 +20,6 @@ mise install
 ## omz
 https://github.com/ohmyzsh/ohmyzsh/wiki
 
-help: [fontconfig](https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig)
-
 ### custom
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth 1
