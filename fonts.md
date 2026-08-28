@@ -23,6 +23,13 @@ ls
   * If you work in a proportional context (GUI elements or edit a presentation etc) pick a font with `Nerd Font Propo` (or `NFP`).
 
 
+## для редакоров
+в vscode придется прописывать руками в settings.json
+```
+"editor.fontFamily": "'JetBrains Mono', monospace",
+"editor.fontLigatures": true
+```
+
 ## Для веба и документов
 
 - https://fonts.google.com/specimen/Merriweather
