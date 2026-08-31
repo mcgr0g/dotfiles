@@ -1,14 +1,23 @@
+[settings]
+npm.package_manager = "bun"
+
 [tools]
-bun = "latest"
 go = "1.26.4"
 node = "lts"
-"npm:prettier" = "latest"
+bun = "latest"
 pnpm = "latest"
 python = "3.12.7"
 uv = "latest"
+java = "26"
+# LSP
+"npm:vscode-json-languageserver" = "latest"
+"npm:yaml-language-server" = "latest"
+## py
+"pipx:basedpyright" = "latest"
+"pipx:ruff" = "latest"
+## sql
+"npm:sql-language-server" = "latest"
+"pipx:jinja-lsp" = "latest"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']
-
-[settings]
-python.github_attestations = false

@@ -1,0 +1,73 @@
+# --- Объявление LSP серверов ---
+
+[[language-server]]
+name = "basedpyright"
+command = "basedpyright"
+args = ["--stdio"]
+
+[[language-server]]
+name = "ruff"
+command = "ruff"
+args = ["server", "--stdin-filename", "%{realpath}"]
+
+[[language-server]]
+name = "vscode-json"
+command = "vscode-json-languageserver"
+args = ["--stdio"]
+
+[[language-server]]
+name = "yaml"
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[[language-server]]
+name = "sql"
+command = "sql-language-server"
+args = ["up", "--method", "stdio", "--dialect", "postgres"]
+
+[[language-server]]
+name = "jdtls"
+command = "jdtls"
+args = ["-data", "~/.cache/jdtls/workspace"]
+
+[[language-server]]
+name = "jinja-lsp"
+command = "jinja-lsp"
+
+
+# --- Привязка к языкам ---
+
+[[language]]
+name = "python"
+scope = "source.python"
+language-servers = [ "basedpyright", "ruff" ]
+formatter = { command = "ruff", args = ["format", "--stdin-filename", "%{realpath}"] }
+auto-format = true
+
+[[language]]
+name = "json"
+scope = "source.json"
+language-servers = [ "vscode-json" ]
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+language-servers = [ "yaml" ]
+
+[[language]]
+name = "sql"
+scope = "source.sql"
+language-servers = [ "sql" ]
+
+[[language]]
+name = "java"
+scope = "source.java"
+language-servers = [ "jdtls" ]
+
+# Для Jinja (dbt). Если твои dbt файлы имеют расширение .jinja или .j2
+[[language]]
+name = "jinja"
+scope = "source.jinja"
+injection-regex = "jinja"
+file-types = ["jinja", "j2", "jinja2"]
+language-servers = [ "jinja-lsp" ]

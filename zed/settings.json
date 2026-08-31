@@ -1,0 +1,54 @@
+{
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true
+      }
+    },
+    "JSON": {
+      "language_servers": ["vscode-json-languageserver"]
+    },
+    "YAML": {
+      "language_servers": ["yaml-language-server"]
+    },
+    "SQL": {
+      "language_servers": ["sql-language-server"]
+    },
+    "Jinja": {
+      "language_servers": ["jinja-lsp"]
+    },
+    "Java": {
+      "language_servers": ["jdtls"]
+    }
+  },
+  "lsp": {
+    "jdtls": {
+      "settings": {
+        "java": {
+          "configuration": {
+            "runtimes": [
+              {
+                "name": "JavaSE-21",
+                "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sql-language-server": {
+      "settings": {
+        "dialect": "postgres"
+      }
+    }
+  }
+}

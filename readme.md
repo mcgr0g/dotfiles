@@ -11,6 +11,7 @@ mv .bashrc .bashrc-bkp
 ln -s .dotfiles/.bashrc .bashrc
 mv .zshrc .zshrc-bkp
 ln -s .dotfiles/.zshrc .zshrc
+touch ~/.zsh_aliases
 mkdir -p ~/.config/mise
 ln -s ~/.dotfiles/mise/config.toml ~/.config/mise/config.toml
 mise install
@@ -40,7 +41,6 @@ keybind = alt+right=unbind
 clipboard-write = "allow"
 clipboard-read = "allow"
 ```
-
 
 ## yazi
 [install manual](https://yazi-rs.github.io/docs/installation/)
