@@ -34,6 +34,11 @@ echo "${PATH//:/$'\n'}"
 ```
 font-family = "JetBrainsMono Nerd Font"
 shell-integration-features = "ssh-terminfo,ssh-env"
+macos-option-as-alt = true
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+clipboard-write = "allow"
+clipboard-read = "allow"
 ```
 
 
@@ -43,15 +48,6 @@ shell-integration-features = "ssh-terminfo,ssh-env"
 
 ## zellij
 [install manual](https://zellij.dev/documentation/installation.html)
-command+,
-```
-font-family = "JetBrainsMono Nerd Font"
-shell-integration-features = "ssh-terminfo,ssh-env"
-macos-option-as-alt = "left"
-macos-right-option-as-alt = false
-clipboard-write = "allow"
-clipboard-read = "allow"
-```
 
 ## zed
 [install manual](https://zed.dev/docs/installation)
