@@ -1,6 +1,7 @@
 [tools]
+bun = "latest"
 go = "1.26.4"
-node = "22"
+node = "lts"
 "npm:prettier" = "latest"
 pnpm = "latest"
 python = "3.12.7"
