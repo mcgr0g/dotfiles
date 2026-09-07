@@ -31,23 +31,14 @@ echo "${PATH//:/$'\n'}"
 
 ## ghostty
 [install manual](https://ghostty.org/docs/install/binary)
-Надобно шрифты поставить и отрисовку на удаленных серверах починить: в File → Settings подкинуть
-```
-font-family = "JetBrainsMono Nerd Font"
-shell-integration-features = "ssh-terminfo,ssh-env"
-macos-option-as-alt = true
-keybind = alt+left=unbind
-keybind = alt+right=unbind
-clipboard-write = "allow"
-clipboard-read = "allow"
-```
+Для мака есть специальные [настройки и биндинги](ghostty/mac/config.ghostty)
+
+## zellij
+[install manual](https://zellij.dev/documentation/installation.html)
 
 ## yazi
 [install manual](https://yazi-rs.github.io/docs/installation/)
 при использовании zsh с [враппером](https://yazi-rs.github.io/docs/quick-start#shell-wrapper) там по y входить, по q выходить (с сохранением найденной локации в pwd). Остальное интуитивно.
-
-## zellij
-[install manual](https://zellij.dev/documentation/installation.html)
 
 ## zed
 [install manual](https://zed.dev/docs/installation)

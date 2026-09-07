@@ -1,0 +1,30 @@
+# 1. Шрифт и базовая интеграция
+font-family = "JetBrainsMono Nerd Font"
+shell-integration-features = "ssh-terminfo,ssh-env"
+
+# 2. Буфер обмена (Разрешаем сквозное копирование по SSH)
+clipboard-write = "allow"
+clipboard-read = "allow"
+
+# 3. Настройка клавиши Option
+# Отключаем глобальный перехват alt=true, чтобы он не ломал стрелки.
+# Вместо этого мы точечно настроим прыжки по словам.
+macos-option-as-alt = false
+
+# 4. Нативное маковское перемещение по словам (Option + Стрелки)
+# Заставляем Ghostty слать стандартные Unix-коды для прыжков по словам назад/вперед
+keybind = alt+left=text:\x1bb
+keybind = alt+right=text:\x1bf
+
+# 5. Перемещение по строкам (Command + Стрелки)
+# Команда начала и конца строки (\x01 — это Ctrl+A, \x05 — это Ctrl+E в Unix)
+keybind = cmd+left=text:\x01
+keybind = cmd+right=text:\x05
+
+# 6. Перемещение по строкам через Control (Для совместимости, если нужно)
+keybind = ctrl+left=text:\x01
+keybind = ctrl+right=text:\x05
+
+# 7. Исправление проблемы Shift + Стрелки (Выделение текста в промпте)
+keybind = shift+left=text:\x1b[D
+keybind = shift+right=text:\x1b[C
