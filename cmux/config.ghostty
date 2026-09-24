@@ -1,0 +1,16 @@
+# 1. Шрифт и базовая интеграция
+font-family = "JetBrainsMono Nerd Font"
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+shell-integration-features = "ssh-terminfo,ssh-env"
+
+# 2. Буфер обмена
+clipboard-write = "allow"
+clipboard-read = "allow"
+
+# 3. Возвращаем стандартное поведение Option для macOS
+# Включаем true, чтобы cmux корректно пробрасывал Option в шелл (Zsh/Bash)
+macos-option-as-alt = true
+
+# 4. Отключаем нативную строку вкладок Ghostty (Важно!)
+# У cmux свой графический сайдбар, вкладки Ghostty будут только дублировать интерфейс
+window-show-tab-bar = never
